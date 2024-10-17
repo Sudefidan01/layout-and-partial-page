@@ -1,0 +1,25 @@
+﻿@using _09122023_LayoutAndPartialPage.Models;
+@model List<Kisi> 
+@{
+    ViewBag.Title = "Sayfa3";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Kişiler </h2>
+<hr />
+<table border="1"width="100%">
+    <tr>
+        <th> Ad </th>
+        <th> Soyad </th>
+        <th> Unvan </th>
+    </tr>
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Ad</td>
+                    <td>@item.Soyad</td>
+                    <td>@item.Unvan</td>
+                </tr>
+            }
+</table>
+
